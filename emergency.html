@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Card - CrowdWise</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { background-color: #000000; color: #FFFFFF; }
+    .emergency-block { background: #FFFFFF; color: #141211; border-radius: 24px; padding: 1.75rem; }
+    .call-btn {
+      background-color: var(--signal-red);
+      color: #FFFFFF;
+      min-height: 54px;
+      font-size: 1.2rem;
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      width: 100%;
+    }
+    .call-btn:hover { background-color: #B81D24; color: #FFFFFF; }
+  </style>
+</head>
+<body>
+  <header class="app-header" style="background: #141211;">
+    <button onclick="history.back()" class="colour-btn py-1 px-3 fs-6" style="width: auto; background: var(--platinum-silver); color: var(--near-black);" data-i18n="back">Back</button>
+    <span class="app-logo text-danger">⚠️ EMERGENCY</span>
+    <button id="btn-lang-toggle" class="lang-toggle-btn">हिन्दी</button>
+  </header>
+
+  <main class="container py-4">
+    <div class="mb-3 text-center">
+      <h1 class="display-6 fw-black text-danger" data-i18n="emergency_heading">Lost Child / Companion Help</h1>
+      <p class="fs-6 text-light opacity-90" data-i18n="emergency_instructions">
+        Stay where you are or go to the nearest help desk, and show this screen.
+      </p>
+    </div>
+
+    <div id="quick-create-section" class="colour-block p-4 mb-4 d-none" style="background-color: var(--platinum-silver); color: var(--near-black);">
+      <h2 class="h4 mb-2">Create Rapid Card (30 seconds)</h2>
+      <div class="row g-2 mb-3">
+        <div class="col-sm-6"><input type="text" id="eq-name" class="form-control" placeholder="Family Name (e.g. Verma)"></div>
+        <div class="col-sm-6"><input type="tel" id="eq-phone" class="form-control" placeholder="Emergency Phone Number"></div>
+      </div>
+      <button id="btn-quick-save" class="colour-btn" style="background-color: var(--signal-red); color: #FFF;">Generate Emergency Pass</button>
+    </div>
+
+    <div class="emergency-block text-center mb-4">
+      <h2 class="h3 fw-black mb-2" id="em-family-name">Sharma Family</h2>
+      <div class="badge bg-danger fs-6 mb-3" id="em-members-badge">Anita (Adult) • Rohan (Child)</div>
+      <div id="emergency-qr" style="max-width: 250px; height: 250px; margin: 0 auto;" class="p-2 border rounded-3 bg-white"></div>
+      <p class="small text-secondary mt-2 mb-0">Contains offline contacts & meeting coordinates.</p>
+    </div>
+
+    <div class="row g-3 mb-4">
+      <div class="col-sm-6">
+        <a href="tel:9876543210" id="call-primary-btn" class="call-btn">📞 <span id="call-primary-label">Call Primary</span></a>
+      </div>
+      <div class="col-sm-6">
+        <a href="tel:9123456780" id="call-backup-btn" class="call-btn" style="background-color: var(--deep-blue);">📞 <span id="call-backup-label">Call Backup</span></a>
+      </div>
+    </div>
+
+    <div class="emergency-block mb-4">
+      <h3 class="h5 fw-bold mb-3">Designated Meeting Points</h3>
+      <div class="p-3 rounded-3 mb-2" style="background: var(--platinum-silver);">
+        <span class="text-secondary small fw-bold">Primary Point:</span>
+        <h4 class="h5 m-0 fw-bold" id="em-meet1">Family Banyan Tree Rest Stop</h4>
+      </div>
+      <div class="p-3 rounded-3" style="background: var(--platinum-silver);">
+        <span class="text-secondary small fw-bold">Backup Point:</span>
+        <h4 class="h5 m-0 fw-bold" id="em-meet2">Booth #1 Main Plaza Help Desk</h4>
+      </div>
+    </div>
+
+    <div class="emergency-block mb-4">
+      <h3 class="h5 fw-bold mb-3" data-i18n="emergency_booths_title">Official Lost-and-Found Centers</h3>
+      <div id="official-booths-list" class="d-flex flex-column gap-3"></div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/qrcode.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/emergency.js"></script>
+</body>
+</html>

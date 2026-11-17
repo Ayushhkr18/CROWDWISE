@@ -1,0 +1,409 @@
+{
+  "startHour": 6,
+  "festivals": [
+    {
+      "id": "diwali",
+      "name_en": "Diwali",
+      "name_hi": "दीपावली",
+      "themeKey": "diwali",
+      "greeting_en": "Happy Diwali! Walk peacefully amidst the lights.",
+      "greeting_hi": "शुभ दीपावली! दीपों के उत्सव में सहजता से घूमें।",
+      "hourlyWeekday": [15, 20, 35, 55, 70, 75, 60, 45, 50, 65, 85, 95, 90, 70, 40],
+      "hourlyWeekend": [20, 30, 48, 70, 85, 90, 75, 60, 68, 85, 98, 100, 95, 80, 50]
+    },
+    {
+      "id": "durga_puja",
+      "name_en": "Durga Puja",
+      "name_hi": "दुर्गा पूजा",
+      "themeKey": "durga_puja",
+      "greeting_en": "Shubho Sharodiya! Enjoy smooth pandal visits.",
+      "greeting_hi": "शुभ शारदोत्सव! सुगम और शांत दर्शन करें।",
+      "hourlyWeekday": [10, 18, 30, 50, 68, 70, 58, 40, 52, 70, 90, 98, 92, 75, 45],
+      "hourlyWeekend": [18, 28, 45, 65, 82, 88, 72, 58, 65, 82, 98, 100, 96, 85, 55]
+    },
+    {
+      "id": "rath_yatra",
+      "name_en": "Rath Yatra",
+      "name_hi": "रथ यात्रा",
+      "themeKey": "rath_yatra",
+      "greeting_en": "Jai Jagannath! Navigate the grand path safely.",
+      "greeting_hi": "जय जगन्नाथ! बड़े मार्ग पर सुरक्षित और शांत चलें।",
+      "hourlyWeekday": [25, 40, 60, 80, 90, 85, 70, 60, 65, 75, 85, 80, 65, 50, 30],
+      "hourlyWeekend": [35, 55, 75, 92, 98, 95, 82, 70, 78, 88, 95, 90, 75, 60, 40]
+    },
+    {
+      "id": "holi",
+      "name_en": "Holi",
+      "name_hi": "होली",
+      "themeKey": "holi",
+      "greeting_en": "Happy Holi! Find gentle, colourful play zones.",
+      "greeting_hi": "शुभ होली! सुरक्षित और सहज रंगों के साथ आनंद लें।",
+      "hourlyWeekday": [12, 25, 50, 80, 95, 85, 50, 30, 35, 45, 55, 50, 35, 20, 10],
+      "hourlyWeekend": [20, 38, 65, 92, 100, 90, 60, 40, 45, 55, 65, 60, 42, 25, 15]
+    },
+    {
+      "id": "eid",
+      "name_en": "Eid",
+      "name_hi": "ईद",
+      "themeKey": "eid",
+      "greeting_en": "Eid Mubarak! Celebrate with warmth and ease.",
+      "greeting_hi": "ईद मुबारक! सुख और सुकून के साथ मिलन का आनंद लें।",
+      "hourlyWeekday": [40, 65, 75, 50, 40, 35, 45, 50, 60, 75, 85, 70, 55, 40, 25],
+      "hourlyWeekend": [50, 75, 85, 60, 50, 45, 55, 60, 72, 85, 95, 80, 65, 50, 30]
+    },
+    {
+      "id": "christmas",
+      "name_en": "Christmas",
+      "name_hi": "क्रिसमस",
+      "themeKey": "christmas",
+      "greeting_en": "Merry Christmas! Stroll through cozy lit avenues.",
+      "greeting_hi": "मेरी क्रिसमस! रोशनी से सजे मार्गों पर शांति से घूमें।",
+      "hourlyWeekday": [10, 15, 25, 40, 55, 60, 50, 45, 60, 75, 90, 95, 85, 60, 30],
+      "hourlyWeekend": [15, 22, 35, 55, 70, 78, 65, 60, 75, 88, 98, 100, 92, 70, 40]
+    },
+    {
+      "id": "new_year",
+      "name_en": "New Year",
+      "name_hi": "नव वर्ष",
+      "themeKey": "new_year",
+      "greeting_en": "Happy New Year! Plan a calm, joyful evening.",
+      "greeting_hi": "नव वर्ष की शुभकामनाएं! शांत और सुखद शाम की योजना बनाएं।",
+      "hourlyWeekday": [10, 12, 20, 30, 40, 50, 45, 50, 65, 80, 95, 100, 100, 85, 40],
+      "hourlyWeekend": [15, 18, 28, 40, 52, 62, 58, 65, 78, 90, 98, 100, 100, 90, 50]
+    },
+    {
+      "id": "ganesh_chaturthi",
+      "name_en": "Ganesh Chaturthi",
+      "name_hi": "गणेश चतुर्थी",
+      "themeKey": "ganesh_chaturthi",
+      "greeting_en": "Ganpati Bappa Morya! Have an accessible darshan.",
+      "greeting_hi": "गणपति बाप्पा मोरया! सुलभ और सुखद दर्शन प्राप्त करें।",
+      "hourlyWeekday": [20, 35, 55, 75, 80, 70, 55, 48, 60, 78, 90, 92, 80, 60, 35],
+      "hourlyWeekend": [30, 50, 70, 88, 95, 85, 68, 60, 75, 90, 98, 98, 88, 70, 45]
+    },
+    {
+      "id": "onam",
+      "name_en": "Onam",
+      "name_hi": "ओणम",
+      "themeKey": "onam",
+      "greeting_en": "Happy Onam! Admire the vibrant flower displays.",
+      "greeting_hi": "शुभ ओणम! सुंदर पूकलम और सांस्कृतिक उत्सव का आनंद लें।",
+      "hourlyWeekday": [15, 25, 40, 60, 75, 65, 50, 45, 55, 70, 80, 75, 60, 45, 25],
+      "hourlyWeekend": [20, 35, 55, 75, 88, 80, 62, 55, 68, 82, 92, 88, 70, 55, 35]
+    }
+  ],
+  "zones": [
+    {
+      "id": "z_gate",
+      "name": "Main Entrance Plaza",
+      "x": 30,
+      "y": 30,
+      "width": 140,
+      "height": 90,
+      "crowdFactor": 1.1,
+      "stepFree": true
+    },
+    {
+      "id": "z_avenue",
+      "name": "Grand Boulevard",
+      "x": 200,
+      "y": 30,
+      "width": 260,
+      "height": 90,
+      "crowdFactor": 1.0,
+      "stepFree": true
+    },
+    {
+      "id": "z_sanctum",
+      "name": "Central Pavilion",
+      "x": 490,
+      "y": 30,
+      "width": 180,
+      "height": 90,
+      "crowdFactor": 1.4,
+      "stepFree": true
+    },
+    {
+      "id": "z_heritage",
+      "name": "Cultural Courtyard",
+      "x": 30,
+      "y": 150,
+      "width": 140,
+      "height": 110,
+      "crowdFactor": 0.7,
+      "stepFree": false
+    },
+    {
+      "id": "z_serene",
+      "name": "Quiet Garden & Rest Park",
+      "x": 200,
+      "y": 150,
+      "width": 260,
+      "height": 110,
+      "crowdFactor": 0.4,
+      "stepFree": true
+    },
+    {
+      "id": "z_bazaar",
+      "name": "Craft & Food Stalls",
+      "x": 490,
+      "y": 150,
+      "width": 180,
+      "height": 110,
+      "crowdFactor": 1.2,
+      "stepFree": true
+    }
+  ],
+  "points": [
+    {
+      "id": "p_dropoff",
+      "type": "dropoff",
+      "name": "Accessible Drop-off & Shuttle",
+      "x": 50,
+      "y": 60,
+      "zoneId": "z_gate",
+      "accessible": true
+    },
+    {
+      "id": "p_ramp_gate",
+      "name": "East Gate Step-Free Ramp",
+      "x": 150,
+      "y": 75,
+      "zoneId": "z_gate",
+      "accessible": true
+    },
+    {
+      "id": "p_help_main",
+      "type": "help",
+      "name": "Central Information & Wheelchair Desk",
+      "x": 230,
+      "y": 60,
+      "zoneId": "z_avenue",
+      "accessible": true
+    },
+    {
+      "id": "p_lift_bazaar",
+      "name": "Market Elevated Walkway Lift",
+      "x": 470,
+      "y": 170,
+      "zoneId": "z_bazaar",
+      "accessible": true
+    },
+    {
+      "id": "p_sanctum_darshan",
+      "name": "Sanctum View Point",
+      "x": 580,
+      "y": 75,
+      "zoneId": "z_sanctum",
+      "accessible": true
+    },
+    {
+      "id": "p_shady_bench",
+      "name": "Covered Canopy Rest Stop",
+      "x": 280,
+      "y": 200,
+      "zoneId": "z_serene",
+      "accessible": true
+    },
+    {
+      "id": "p_family_meet",
+      "name": "Family Banyan Tree Meeting Point",
+      "x": 360,
+      "y": 210,
+      "zoneId": "z_serene",
+      "accessible": true
+    },
+    {
+      "id": "p_toilet_acc",
+      "type": "acc_toilet",
+      "name": "Priority Accessible Restroom",
+      "x": 220,
+      "y": 220,
+      "zoneId": "z_serene",
+      "accessible": true
+    }
+  ],
+  "routes": [
+    {
+      "id": "shortest",
+      "type": "shortest",
+      "name_en": "Shortest Path",
+      "name_hi": "सबसे छोटा मार्ग",
+      "pointIds": [
+        "p_dropoff",
+        "p_ramp_gate",
+        "p_sanctum_darshan"
+      ],
+      "zoneIds": [
+        "z_gate",
+        "z_avenue",
+        "z_sanctum"
+      ],
+      "distanceMeters": 420,
+      "restStops": 0,
+      "stepFree": false,
+      "crowdTag": "High"
+    },
+    {
+      "id": "comfort",
+      "type": "comfort",
+      "name_en": "Comfort Path (Shade & Seating)",
+      "name_hi": "सुविधा मार्ग (छाया व विश्राम)",
+      "pointIds": [
+        "p_dropoff",
+        "p_ramp_gate",
+        "p_help_main",
+        "p_shady_bench",
+        "p_family_meet"
+      ],
+      "zoneIds": [
+        "z_gate",
+        "z_avenue",
+        "z_serene"
+      ],
+      "distanceMeters": 580,
+      "restStops": 3,
+      "stepFree": true,
+      "crowdTag": "Moderate"
+    },
+    {
+      "id": "calm",
+      "type": "calm",
+      "name_en": "Calm Promenade (Avoids Dense Crowds)",
+      "name_hi": "शांत मार्ग (कम भीड़भाड़)",
+      "pointIds": [
+        "p_dropoff",
+        "p_shady_bench",
+        "p_family_meet"
+      ],
+      "zoneIds": [
+        "z_gate",
+        "z_serene"
+      ],
+      "distanceMeters": 640,
+      "restStops": 4,
+      "stepFree": true,
+      "crowdTag": "Low"
+    },
+    {
+      "id": "accessible",
+      "type": "accessible",
+      "name_en": "Wheelchair-Friendly Priority Route",
+      "name_hi": "व्हीलचेयर सुलभ प्राथमिकता मार्ग",
+      "pointIds": [
+        "p_dropoff",
+        "p_ramp_gate",
+        "p_help_main",
+        "p_toilet_acc",
+        "p_family_meet"
+      ],
+      "zoneIds": [
+        "z_gate",
+        "z_avenue",
+        "z_serene"
+      ],
+      "distanceMeters": 510,
+      "restStops": 3,
+      "stepFree": true,
+      "crowdTag": "Low"
+    }
+  ],
+  "walkingSpeeds": {
+    "regular": 75,
+    "elderly": 45,
+    "family": 50,
+    "wheelchair": 35
+  },
+  "restAndHelp": [
+    {
+      "type": "water",
+      "name_en": "Main Plaza Drinking Water Station",
+      "name_hi": "मुख्य प्लाज़ा पेयजल स्टेशन",
+      "location_en": "Near Main Entrance Plaza",
+      "location_hi": "मुख्य प्रवेश प्लाज़ा के पास",
+      "accessible": true
+    },
+    {
+      "type": "toilet",
+      "name_en": "Grand Boulevard Restroom",
+      "name_hi": "ग्रैंड بولवर्ड शौचालय",
+      "location_en": "Near Central Pavilion",
+      "location_hi": "सेंट्रल पवेलियन के पास",
+      "accessible": false
+    },
+    {
+      "type": "acc_toilet",
+      "name_en": "Priority Accessible Restroom",
+      "name_hi": "प्राथमिकता सुलभ शौचालय",
+      "location_en": "Quiet Garden & Rest Park",
+      "location_hi": "शांत गार्डन और विश्राम पार्क",
+      "accessible": true
+    },
+    {
+      "type": "firstaid",
+      "name_en": "Emergency First Aid Kiosk",
+      "name_hi": "आपातकालीन प्राथमिक चिकित्सा केंद्र",
+      "location_en": "Near Central Information Desk",
+      "location_hi": "केंद्रीय सूचना डेस्क के पास",
+      "accessible": true
+    },
+    {
+      "type": "seating",
+      "name_en": "Covered Canopy Rest Stop",
+      "name_hi": "ढका हुआ कैनopy विश्राम स्थल",
+      "location_en": "Quiet Garden Zone",
+      "location_hi": "शांत गार्डन ज़ोन",
+      "accessible": true
+    },
+    {
+      "type": "help",
+      "name_en": "Central Information & Wheelchair Desk",
+      "name_hi": "केंद्रीय सूचना और व्हीलचेयर डेस्क",
+      "location_en": "Grand Boulevard",
+      "location_hi": "ग्रैंड بولवर्ड",
+      "accessible": true
+    }
+  ],
+  "tips": {
+    "regular": [
+      {
+        "en": "Plan your visits during off-peak hours (early morning or late evening) to avoid heavy crowds.",
+        "hi": "भारी भीड़ से बचने के लिए ऑफ-पीक घंटों (सुबह जल्दी या देर शाम) में जाने की योजना बनाएं।"
+      },
+      {
+        "en": "Keep a digital copy of your festival pass and ID handy for quick entry checks.",
+        "hi": "त्वरित प्रवेश जांच के लिए अपने फेस्टिवल पास और आईडी की डिजिटल कॉपी अपने पास रखें।"
+      }
+    ],
+    "elderly": [
+      {
+        "en": "Utilize step-free priority ramps and shaded rest stops along the grand avenue.",
+        "hi": "भव्य मार्ग के साथ चरण-मुक्त प्राथमिकता रैंप और छायादार विश्राम स्थलों का उपयोग करें।"
+      },
+      {
+        "en": "Request wheelchair assistance at the Central Information & Wheelchair Desk if needed.",
+        "hi": "यदि आवश्यक हो तो केंद्रीय सूचना और व्हीलचेयर डेस्क पर व्हीलचेयर सहायता का अनुरोध करें।"
+      }
+    ],
+    "family": [
+      {
+        "en": "Designate a clear meeting point like the Banyan Tree in case family members get separated.",
+        "hi": "परिवार के सदस्यों के अलग होने की स्थिति में बरगद के पेड़ जैसा एक स्पष्ट मिलन बिंदु तय करें।"
+      },
+      {
+        "en": "Keep kids hydrated and use quiet zones for a quick break from the excitement.",
+        "hi": "बच्चों को हाइड्रेटेड रखें और उत्साह से थोड़ी राहत पाने के लिए शांत क्षेत्रों का उपयोग करें।"
+      }
+    ],
+    "wheelchair": [
+      {
+        "en": "Stick to the Wheelchair-Friendly Priority Route which ensures step-free paths and ramps.",
+        "hi": "व्हीलचेयर-अनुकूल प्राथमिकता मार्ग पर टिके रहें जो चरण-मुक्त पथ और रैंप सुनिश्चित करता है।"
+      },
+      {
+        "en": "Priority accessible restrooms are available near the Quiet Garden & Rest Park zone.",
+        "hi": "शांत गार्डन और विश्राम पार्क ज़ोन के पास प्राथमिकता सुलभ शौचालय उपलब्ध हैं।"
+      }
+    ]
+  }
+}

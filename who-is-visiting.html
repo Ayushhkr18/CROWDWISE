@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who is Visiting - CrowdWise</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .visitor-card {
+      border-radius: 20px;
+      padding: 1.5rem;
+      cursor: pointer;
+      border: 4px solid transparent;
+      color: #FFFFFF;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .visitor-card:hover { transform: translateY(-3px); }
+    .visitor-card.selected { border-color: #FFFFFF; box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
+    .day-selector-btn {
+      min-height: 54px;
+      font-weight: 800;
+      border-radius: 16px;
+      border: none;
+      background: var(--platinum-silver);
+      color: var(--near-black);
+      flex: 1;
+      cursor: pointer;
+    }
+    .day-selector-btn.active { background: var(--near-black); color: #FFFFFF; }
+  </style>
+</head>
+<body>
+  <div class="header-motif-bar"></div>
+  <header class="app-header">
+    <a href="choose-festival.html" class="colour-btn py-1 px-3 fs-6" style="width: auto; background: var(--platinum-silver); color: var(--near-black);" data-i18n="back">Back</a>
+    <div class="d-flex align-items-center gap-2">
+      <span class="badge bg-secondary px-3 py-2" data-i18n="step_visitor">Step 2 of 3</span>
+      <button id="btn-lang-toggle" class="lang-toggle-btn">हिन्दी</button>
+    </div>
+  </header>
+
+  <main class="container py-4">
+    <div class="mb-4">
+      <h1 class="display-5" data-i18n="who_visiting_heading">Who is Visiting?</h1>
+      <p class="fs-5 text-secondary fw-semibold" data-i18n="who_visiting_sub">Select your group profile and planned day.</p>
+    </div>
+
+    <div class="row g-3 mb-4">
+      <div class="col-md-6">
+        <div class="visitor-card selected" data-type="regular" style="background-color: var(--deep-blue);">
+          <h2 class="h3 m-0" data-i18n="type_regular">Regular Visitor</h2>
+          <p class="m-0 mt-2 fs-6 opacity-75" data-i18n="type_regular_desc">Standard walking speeds with direct access paths.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="visitor-card" data-type="elderly" style="background-color: var(--mocha-brown);">
+          <h2 class="h3 m-0" data-i18n="type_elderly">Elderly Visitor</h2>
+          <p class="m-0 mt-2 fs-6 opacity-75" data-i18n="type_elderly_desc">Gentle paced paths with frequent rest benches and shades.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="visitor-card" data-type="family" style="background-color: var(--burnt-orange);">
+          <h2 class="h3 m-0" data-i18n="type_family">Family with Kids</h2>
+          <p class="m-0 mt-2 fs-6 opacity-75" data-i18n="type_family_desc">Stroller-friendly ramps, quick exit lines, and kid safety.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="visitor-card" data-type="wheelchair" style="background-color: var(--deep-teal);">
+          <h2 class="h3 m-0" data-i18n="type_wheelchair">Wheelchair User</h2>
+          <p class="m-0 mt-2 fs-6 opacity-75" data-i18n="type_wheelchair_desc">Strictly step-free ramps, wide pathways, and accessible lifts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="colour-block p-4" style="background-color: #FFFFFF;">
+      <h2 class="h4 mb-3" data-i18n="day_choice_label">When are you planning to visit?</h2>
+      <div class="d-flex flex-column flex-sm-row gap-3">
+        <button type="button" class="day-selector-btn active" id="btn-weekday" data-day="weekday" data-i18n="day_weekday">Weekday (Mon - Thu)</button>
+        <button type="button" class="day-selector-btn" id="btn-weekend" data-day="weekend" data-i18n="day_weekend">Weekend / Holiday (Fri - Sun)</button>
+      </div>
+    </div>
+
+    <button id="btn-continue-home" class="colour-btn mt-3" style="background-color: var(--mustard); color: var(--near-black);" data-i18n="btn_confirm_profile">Continue to Home</button>
+  </main>
+
+  <a href="emergency.html" class="lost-floating-action">
+    <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+    <span data-i18n="btn_lost_help">Lost Child / Companion Help</span>
+  </a>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/who-is-visiting.js"></script>
+</body>
+</html>

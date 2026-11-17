@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When to Go - CrowdWise</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .crowd-chart-container {
+      display: flex;
+      align-items: flex-end;
+      height: 220px;
+      gap: 6px;
+      padding: 1.5rem 0.5rem 0.5rem;
+      background: #FFFFFF;
+      border-radius: 20px;
+      overflow-x: auto;
+    }
+    .crowd-bar-col {
+      flex: 1;
+      min-width: 32px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      cursor: pointer;
+    }
+    .crowd-bar {
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+      transition: height 0.3s ease, filter 0.2s ease;
+    }
+    .crowd-bar-col.active .crowd-bar {
+      outline: 3px solid var(--near-black);
+      outline-offset: 2px;
+      filter: brightness(1.1);
+    }
+    .bar-time-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-top: 6px;
+      color: var(--near-black);
+    }
+    .crowd-slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 12px;
+      border-radius: 8px;
+      background: var(--platinum-silver);
+      outline: none;
+    }
+    .crowd-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--near-black);
+      cursor: pointer;
+      border: 3px solid #FFFFFF;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .crowd-slider::-moz-range-thumb {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--near-black);
+      cursor: pointer;
+      border: 3px solid #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-motif-bar"></div>
+  <header class="app-header">
+    <a href="home.html" class="colour-btn py-1 px-3 fs-6" style="width: auto; background: var(--platinum-silver); color: var(--near-black);" data-i18n="back">Back</a>
+    <span class="app-logo">CrowdWise</span>
+    <button id="btn-lang-toggle" class="lang-toggle-btn">हिन्दी</button>
+  </header>
+
+  <main class="container py-4">
+    <div class="mb-4">
+      <h1 class="display-5" data-i18n="when_heading">When to Go</h1>
+      <p class="fs-5 text-secondary fw-semibold" data-i18n="when_sub">Hourly crowd projections to plan a serene visit.</p>
+    </div>
+
+    <div class="colour-block mb-4" style="background-color: var(--olive); color: #FFFFFF;">
+      <span class="badge bg-dark text-white rounded-pill px-3 py-2 fs-6 mb-2" data-i18n="calm_recommendation_label">Recommended Calm Window</span>
+      <h2 class="h2 m-0" id="calm-window-text">6:00 AM – 8:00 AM</h2>
+      <p class="fs-6 m-0 mt-2 opacity-90" id="calm-window-advice">Mornings offer the lowest density and smooth entry transitions.</p>
+    </div>
+
+    <div class="colour-block p-4 mb-4" style="background-color: #FFFFFF;">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="h5 m-0 fw-bold">6 AM – 8 PM Projections</h3>
+        <div class="d-flex gap-2">
+          <span class="badge" style="background-color: var(--olive);">Low</span>
+          <span class="badge" style="background-color: var(--mustard); color: #141211;">Mod</span>
+          <span class="badge" style="background-color: var(--signal-red);">High</span>
+        </div>
+      </div>
+
+      <div class="crowd-chart-container" id="crowd-chart" role="region" aria-label="Crowd level chart from 6 AM to 8 PM"></div>
+    </div>
+
+    <div class="colour-block p-4 mb-4" style="background-color: var(--platinum-silver);">
+      <label for="hour-range" class="form-label fs-5 fw-bold mb-3" data-i18n="slider_label">Drag slider to preview crowd by hour:</label>
+      <input type="range" class="crowd-slider mb-3" id="hour-range" min="6" max="20" step="1" value="7" aria-label="Select hour of day">
+
+      <div class="colour-block p-3 m-0" id="status-card" style="background-color: #FFFFFF;">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h3 class="h3 m-0" id="current-hour-label">7:00 AM</h3>
+            <span class="badge mt-2 px-3 py-2 fs-6" id="current-level-badge">Low Crowd</span>
+          </div>
+          <div class="text-end">
+            <p class="fs-6 fw-bold m-0" id="friendly-swap-tip">Optimal calm period.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <a href="emergency.html" class="lost-floating-action">
+    <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+    <span data-i18n="btn_lost_help">Lost Child / Companion Help</span>
+  </a>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/when-to-go.js"></script>
+</body>
+</html>

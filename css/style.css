@@ -1,0 +1,209 @@
+/* CrowdWise Shared Style - Grotesk Colour-Block Design System */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Inter:wght@500;600;700&family=Noto+Sans+Devanagari:wght@600;800&display=swap');
+
+:root {
+  /* Highlight Palette */
+  --mocha-brown: #6F4E37;
+  --pale-lavender: #E6E0F0;
+  --platinum-silver: #E5E4E2;
+  --near-black: #141211;
+  --warm-cream: #F6EFD9;
+  --sage-cream: #E8ECD6;
+  --terracotta: #B8442F;
+  --mustard: #E0A820;
+  --deep-teal: #1F6F6B;
+  --deep-blue: #1E3A6B;
+  --burnt-orange: #FF7A3D;
+  --signal-red: #E0262F;
+  --olive: #7A8B3C;
+
+  /* Active Dynamic Theme Tokens (Default: Diwali) */
+  --theme-bg: #F6EFD9;
+  --theme-card: #B8442F;
+  --theme-text: #FFFFFF;
+  --theme-accent: #E0A820;
+  --theme-motif-color: rgba(224, 168, 32, 0.25);
+
+  --font-display: 'Archivo', 'PP Neue Montreal', 'Neue Haas Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-devanagari: 'Noto Sans Devanagari', sans-serif;
+}
+
+[lang="hi"] body, [lang="hi"] h1, [lang="hi"] h2, [lang="hi"] h3, [lang="hi"] button {
+  font-family: var(--font-devanagari), var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.45;
+  background-color: var(--theme-bg);
+  color: var(--near-black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.4s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 4px solid var(--theme-accent) !important;
+  outline-offset: 3px !important;
+}
+
+/* Grotesk Display Headings */
+h1, .h1, h2, .h2, h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+/* Solid Rounded Colour Blocks */
+.colour-block {
+  border-radius: 22px;
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+  border: none;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.colour-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.85rem 1.75rem;
+  border-radius: 18px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, filter 0.15s ease;
+  width: 100%;
+}
+.colour-btn:hover {
+  filter: brightness(0.94);
+}
+.colour-btn:active {
+  transform: translateY(2px);
+}
+
+/* Theme Motif Banner in Header */
+.header-motif-bar {
+  width: 100%;
+  height: 12px;
+  background: repeating-linear-gradient(90deg, var(--theme-accent), var(--theme-accent) 24px, transparent 24px, transparent 48px);
+}
+
+/* App Header Nav */
+.app-header {
+  background: var(--near-black);
+  color: #FFFFFF;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app-logo {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.lang-toggle-btn {
+  background: var(--platinum-silver);
+  color: var(--near-black);
+  border-radius: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* Split Login Screen */
+.split-login-bg {
+  background-color: var(--mocha-brown);
+  color: var(--pale-lavender);
+  min-height: 100vh;
+}
+.login-title {
+  color: var(--pale-lavender);
+  font-size: clamp(3.2rem, 9vw, 5.5rem);
+}
+.login-card {
+  background-color: var(--platinum-silver);
+  color: var(--near-black);
+  border-radius: 24px;
+}
+.btn-lavender {
+  background-color: var(--pale-lavender);
+  color: var(--mocha-brown);
+}
+.btn-mocha {
+  background-color: var(--mocha-brown);
+  color: #FFFFFF;
+}
+
+/* Floating Emergency Lost Companion Button */
+.lost-floating-action {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 1050;
+  background-color: var(--signal-red);
+  color: #FFFFFF;
+  font-weight: 800;
+  padding: 14px 22px;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(224, 38, 47, 0.45);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lost-floating-action:hover {
+  color: #FFFFFF;
+  filter: brightness(0.92);
+}
+
+/* Subtitle and Form Styling */
+.form-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+.form-control {
+  border-radius: 14px;
+  min-height: 50px;
+  border: 2px solid rgba(20, 18, 17, 0.15);
+  font-size: 1.05rem;
+}
+
+/* Subtle Festival Animations */
+@keyframes softFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+.theme-animated {
+  animation: softFloat 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

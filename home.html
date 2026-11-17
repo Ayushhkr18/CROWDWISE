@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - CrowdWise</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .hub-tile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 140px;
+      padding: 1.5rem;
+      border-radius: 24px;
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+    .hub-tile:hover {
+      transform: translateY(-4px);
+      filter: brightness(0.96);
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-motif-bar"></div>
+  <header class="app-header">
+    <div class="dropdown">
+      <button class="btn btn-dark dropdown-toggle fw-bold" type="button" id="menuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        ☰ Menu
+      </button>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="menuDropdown">
+        <li><a class="dropdown-item" href="tour.html" data-i18n="menu_replay_tour">Replay Welcome Tour</a></li>
+        <li><a class="dropdown-item" href="choose-festival.html" data-i18n="select_fest_heading">Change Festival</a></li>
+        <li><a class="dropdown-item" href="who-is-visiting.html" data-i18n="who_visiting_heading">Change Visitor Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="about.html" data-i18n="menu_about">About & Privacy</a></li>
+        <li><a class="dropdown-item" href="index.html" id="btn-logout" data-i18n="menu_logout">Sign Out</a></li>
+      </ul>
+    </div>
+    <span class="app-logo">CrowdWise</span>
+    <button id="btn-lang-toggle" class="lang-toggle-btn">हिन्दी</button>
+  </header>
+
+  <main class="container py-4">
+    <div class="colour-block mb-4" id="banner-greeting" style="background-color: var(--theme-card); color: var(--theme-text);">
+      <h1 class="display-6 mb-2" id="greeting-title">Welcome</h1>
+      <p class="fs-5 m-0 opacity-90" id="greeting-sub">Have a safe and peaceful celebration.</p>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4">
+        <a href="when-to-go.html" class="hub-tile" style="background-color: var(--burnt-orange);">
+          <span class="fs-2">⏰</span>
+          <div>
+            <h2 class="h3 m-0" data-i18n="nav_when_to_go">When to Go</h2>
+            <p class="fs-6 m-0 mt-1 opacity-90" data-i18n="nav_when_desc">Calm hour planner & hourly crowd levels</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="find-my-way.html" class="hub-tile" style="background-color: var(--deep-blue);">
+          <span class="fs-2">🗺️</span>
+          <div>
+            <h2 class="h3 m-0" data-i18n="nav_find_way">Find My Way</h2>
+            <p class="fs-6 m-0 mt-1 opacity-90" data-i18n="nav_find_desc">Step-free SVG venue map & custom paths</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="tips.html" class="hub-tile" style="background-color: var(--olive);">
+          <span class="fs-2">💡</span>
+          <div>
+            <h2 class="h3 m-0" data-i18n="nav_tips">Tips for Me</h2>
+            <p class="fs-6 m-0 mt-1 opacity-90" data-i18n="nav_tips_desc">Tailored guidance for your visitor group</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-6">
+        <a href="rest-and-help.html" class="hub-tile" style="background-color: var(--deep-teal);">
+          <span class="fs-2">🪑</span>
+          <div>
+            <h2 class="h3 m-0" data-i18n="nav_points">Rest & Help Points</h2>
+            <p class="fs-6 m-0 mt-1 opacity-90" data-i18n="nav_points_desc">Toilets, chilled water & first aid kiosks</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-12 col-lg-6">
+        <a href="family-card.html" class="hub-tile" style="background-color: var(--mocha-brown);">
+          <span class="fs-2">🛡️</span>
+          <div>
+            <h2 class="h3 m-0" data-i18n="nav_family">Family Safety Card</h2>
+            <p class="fs-6 m-0 mt-1 opacity-90" data-i18n="nav_family_desc">Offline ID, reunion points & shareable card</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-4 pt-2">
+      <a href="feedback.html" class="colour-btn" style="background-color: var(--mustard); color: var(--near-black);" data-i18n="btn_finish_visit">Complete & Feedback</a>
+    </div>
+  </main>
+
+  <a href="emergency.html" class="lost-floating-action">
+    <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+    <span data-i18n="btn_lost_help">Lost Child / Companion Help</span>
+  </a>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
